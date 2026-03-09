@@ -1,4 +1,4 @@
-baseURL: "https://smileyniloc.github.io/my-bio"
+baseURL: "https://smileyniloc.github.io/my-bio/"
 languageCode: "en-us"
 title: "Colin Aten"
 theme: hugo-profiles
@@ -102,7 +102,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/static/images/me.jpg"
+    image: "/images/me.jpg"
     skills:
       enable: true
       title: "Here are a few technologies I've been working with recently:"
