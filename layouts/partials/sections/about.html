@@ -1,0 +1,189 @@
+{{- if .Site.Params.about.enable | default false -}} {{- $resume :=
+.Site.Data.resume -}}
+
+<style>
+  /* ── Section title ── */
+  #about h3.about-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.45rem;
+  }
+  #about h3.about-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--primary-color);
+    opacity: 0.75;
+  }
+
+  /* ── Profile image ── */
+  #about .about-img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  #about .about-img-wrap img {
+    width: min(240px, 100%);
+    border-radius: 50%;
+    border: 3px solid rgba(128, 128, 128, 0.15);
+    box-shadow:
+      0 0 0 5px var(--secondary-color),
+      0 0 0 7px var(--primary-color),
+      0 12px 40px rgba(0, 0, 0, 0.18);
+    transition: box-shadow 0.3s ease;
+  }
+  #about .about-img-wrap img:hover {
+    box-shadow:
+      0 0 0 5px var(--secondary-color),
+      0 0 0 7px var(--primary-color),
+      0 16px 48px rgba(0, 0, 0, 0.28);
+  }
+
+  /* ── Summary ── */
+  #about .about-summary {
+    font-size: 1rem;
+    line-height: 1.8;
+    opacity: 0.88;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  /* ── Skills heading ── */
+  #about .about-skills-heading {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.45;
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  #about .about-skills-heading::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.3;
+  }
+
+  /* ── Skill groups grid ── */
+  #about .about-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    gap: 1rem 1.5rem;
+  }
+  #about .about-skill-group {
+    margin-bottom: 0 !important;
+  }
+
+  /* ── Skill groups ── */
+  #about .about-skill-label {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.5;
+    margin-bottom: 0.4rem;
+  }
+  #about .about-skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  #about .about-skill-badge {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 999px;
+    padding: 0.18rem 0.65rem;
+    font-size: 0.775rem;
+    line-height: 1.6;
+    transition:
+      border-color 0.2s,
+      opacity 0.2s;
+  }
+  #about .about-skill-badge:hover {
+    border-color: var(--primary-color);
+    opacity: 1;
+  }
+
+  /* ── List items (when skills.items is used) ── */
+  #about .about-content ul li {
+    line-height: 1.75;
+    margin-bottom: 0.3rem;
+  }
+  #about .about-content ul li::marker {
+    color: var(--primary-color);
+    font-size: 0.85em;
+  }
+</style>
+
+<section id="about" class="py-0">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="about-title d-inline-block">
+        {{- .Site.Params.about.title | default (i18n "about") -}}
+      </h3>
+    </div>
+    <div class="row justify-content-center align-items-center px-3 py-3">
+      {{- if .Site.Params.about.image }}
+      <div
+        class="col-md-4 d-none d-md-flex justify-content-center mb-5 mb-lg-0"
+      >
+        <div class="about-img-wrap">
+          <img
+            src="{{ .Site.Params.about.image }}"
+            alt="{{ .Site.Params.title }} profile picture"
+          />
+        </div>
+      </div>
+      {{- end }}
+
+      <div class="col-sm-12 col-lg-8 about-content">
+        <div class="about-summary">
+          {{- if .Site.Params.about.content }} {{ .Site.Params.about.content |
+          markdownify }} {{- else }} {{ $resume.basics.summary | markdownify }}
+          {{- end }}
+        </div>
+
+        {{- if .Site.Params.about.skills.enable }}
+        <p class="about-skills-heading">
+          {{- .Site.Params.about.skills.title | default (i18n "skills") -}}
+        </p>
+        {{- if .Site.Params.about.skills.items }}
+        <ul class="mb-0">
+          {{- range .Site.Params.about.skills.items }}
+          <li>{{ . | markdownify }}</li>
+          {{- end }}
+        </ul>
+        {{- else }}
+        <div class="about-skills">
+          {{- range $resume.skills }}
+          <div class="about-skill-group">
+            <span class="about-skill-label">{{ .name }}</span>
+            {{- if .keywords }}
+            <div class="about-skill-badges">
+              {{- range .keywords }}<span class="about-skill-badge"
+                >{{ . }}</span
+              >{{ end }}
+            </div>
+            {{- end }}
+          </div>
+          {{- end }}
+        </div>
+        {{- end }} {{- end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{- end }}

@@ -1,0 +1,163 @@
+baseURL: "https://SmileyNiloc.github.io/"
+languageCode: "en-us"
+title: "Colin Aten"
+theme: hugo-profiles
+
+# Multilingual configuration
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: false
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    contentDir: "content"
+    # menu: (blog and gallery hidden)
+  es:
+    languageName: "Español"
+    weight: 2
+    contentDir: "content/es"
+    # menu: (blog and gallery hidden)
+  fr:
+    contentDir: "content/fr"
+    languageName: "Français"
+    weight: 3
+    # menu:
+    # main:
+    #   - identifier: blog
+    #     name: Blog
+    #     title: Articles de blog
+    #     url: /fr/blogs
+    #     weight: 1
+    #   - identifier: gallery
+    #     name: Galerie
+    #     title: Galerie d'images
+    #     url: /fr/gallery
+    #     weight: 2
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  # main:
+  #   - identifier: gallery
+  #     name: Gallery
+  #     title: Gallery
+  #     url: /gallery
+  #     weight: 2
+
+params:
+  title: "Colin Aten"
+  description: "Computer Engineering Student"
+  favicon: "/fav.png"
+  navbar:
+    align: ms-auto
+    brandName: "Colin Aten"
+    brandLogo: "/fav.png"
+    showBrandLogo: true
+    disableSearch: false
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    image: /images/Personal.jpg
+    bottomImage:
+      enable: true
+    button:
+      enable: true
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/static/images/me.jpg"
+    skills:
+      enable: true
+      title: "Here are a few technologies I've been working with recently:"
+
+  # Experience
+  experience:
+    enable: true
+
+  # Education
+  education:
+    enable: true
+    index: false
+
+  # Achievements
+  achievements:
+    enable: true
+    title: "Awards, Recognition, and Leadership"
+
+  # projects
+  projects:
+    enable: true
+
+  #Contact
+  contact:
+    enable: true
+    btnName: Email me
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"

@@ -1,0 +1,53 @@
+{{- $resume := .Site.Data.resume -}}
+{{- $iconMap := dict
+  "github"    "fab fa-github"
+  "linkedin"  "fab fa-linkedin"
+  "twitter"   "fab fa-twitter"
+  "x"         "fab fa-x-twitter"
+  "instagram" "fab fa-instagram"
+  "youtube"   "fab fa-youtube"
+  "facebook"  "fab fa-facebook"
+  "gitlab"    "fab fa-gitlab"
+  "mastodon"  "fab fa-mastodon"
+  "stackoverflow" "fab fa-stack-overflow"
+  "twitch"    "fab fa-twitch"
+  "discord"   "fab fa-discord"
+  "medium"    "fab fa-medium"
+  "dev"       "fab fa-dev"
+  "email"     "fas fa-envelope"
+  "mail"      "fas fa-envelope"
+-}}
+<span>
+  {{/* ── Profiles from resume.json ─────────────────────── */}}
+  {{ range $resume.basics.profiles }}
+  {{ $key := lower .network }}
+  {{ $icon := index $iconMap $key | default "fas fa-link" }}
+  <span class="px-1">
+    <a href="{{ .url }}" target="_blank" class="btn social-icon" title="{{ .network }}">
+      <i class="{{ $icon }}"></i>
+    </a>
+  </span>
+  {{ end }}
+
+  {{/* ── Extra icons from hugo.yaml (fontAwesome) ────────── */}}
+  {{ range .Site.Params.hero.socialLinks.fontAwesomeIcons }}
+  <span class="px-1">
+    <a href="{{ .url }}"
+      {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
+      class="btn social-icon">
+      <i class="{{ .icon }}"></i>
+    </a>
+  </span>
+  {{ end }}
+
+  {{/* ── Extra icons from hugo.yaml (custom img) ─────────── */}}
+  {{ range .Site.Params.hero.socialLinks.customIcons }}
+  <span class="px-1">
+    <a href="{{ .url }}"
+      {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
+      class="btn social-icon">
+      <img src="{{ .icon }}">
+    </a>
+  </span>
+  {{ end }}
+</span>

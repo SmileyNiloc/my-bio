@@ -1,0 +1,59 @@
+{{ if .Site.Params.achievements.enable | default false }} {{- $resume :=
+.Site.Data.resume -}}
+<section id="achievements" class="py-5">
+  <div class="container">
+    <h3 class="text-center">
+      {{ .Site.Params.achievements.title | default (i18n "achievements") }}
+    </h3>
+    <div class="px-0 px-md-5 px-lg-5">
+      <div class="row justify-content-center px-3 px-md-5 px-lg-5">
+        {{ range $resume.awards }}
+        <div class="col-lg-4 col-md-6 my-3">
+          <div class="card my-3 h-100 p-3" title="{{ .title }}">
+            {{ if .image }}
+            <div class="card-head">
+              <img class="card-img-top" src="{{ .image }}" />
+            </div>
+            {{ end }}
+            <div class="card-body bg-transparent">
+              <h5 class="card-title bg-transparent">{{ .title }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted bg-transparent">
+                {{ .awarder }}
+              </h6>
+              <div class="card-text secondary-font">
+                {{ .summary | markdownify }}
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ end }} {{ range $resume.volunteer }}
+        <div class="col-lg-4 col-md-6 my-3">
+          <div
+            class="card my-3 h-100 p-3"
+            title="{{ .position }} - {{ .organization }}"
+          >
+            <div class="card-body bg-transparent">
+              <h5 class="card-title bg-transparent">{{ .position }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted bg-transparent">
+                {{ .organization }}
+              </h6>
+              <div class="card-text secondary-font">
+                {{ if .summary }}
+                <p>{{ .summary | markdownify }}</p>
+                {{ end }} {{ if .highlights }}
+                <ul class="mb-0">
+                  {{ range .highlights }}
+                  <li>{{ . | markdownify }}</li>
+                  {{ end }}
+                </ul>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

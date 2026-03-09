@@ -1,0 +1,166 @@
+{{- if .Site.Params.projects.enable | default false -}} {{- $resume :=
+.Site.Data.resume -}}
+<section id="projects" class="py-5">
+  <div class="container">
+    <h3 class="text-center">{{ (i18n "projects") | default "Projects" }}</h3>
+    <div class="row justify-content-center g-4 px-2 px-md-4">
+      {{- range $resume.projects }}
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="card shadow-sm border-0 project-card{{ if .highlights }} project-card-clickable{{ end }}"
+          title="{{ .name }}"
+          {{-
+          if
+          .highlights
+          }}
+          onclick="projToggle(this)"
+          {{
+          end
+          }}
+        >
+          <div class="card-body bg-transparent p-4">
+            <h5 class="card-title bg-transparent mt-1 fw-bold">{{ .name }}</h5>
+            <p class="card-text bg-transparent secondary-font mb-3 text-muted">
+              {{ .description | markdownify }}
+            </p>
+            {{- if .highlights }}
+            <div class="proj-details-body">
+              <ul
+                class="ps-3 mb-0 mt-2 secondary-font"
+                style="font-size: 0.85rem; line-height: 1.55"
+              >
+                {{- range .highlights }}
+                <li class="mb-2">{{ . | markdownify }}</li>
+                {{- end }}
+              </ul>
+            </div>
+            {{- end }} {{- if .keywords }}
+            <div class="mt-3 d-flex flex-wrap gap-1">
+              {{- range .keywords }}
+              <span
+                class="badge rounded-pill bg-light text-dark border"
+                style="font-size: 0.7rem"
+                >{{ . }}</span
+              >
+              {{- end }}
+            </div>
+            {{- end }}
+          </div>
+          <div
+            class="card-footer bg-transparent border-0 pb-3 px-4 pt-0 d-flex justify-content-between align-items-center"
+          >
+            <div>
+              {{- if .url }}
+              <a
+                href="{{ .url }}"
+                target="_blank"
+                class="text-primary"
+                title="View Source"
+                onclick="event.stopPropagation()"
+              >
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              {{- end }}
+            </div>
+            {{- if .highlights }}
+            <button
+              class="proj-toggle-btn"
+              aria-expanded="false"
+              onclick="
+                event.stopPropagation();
+                projToggle(this.closest('.project-card'));
+              "
+            >
+              <span class="proj-toggle-label">Details</span>
+              <svg
+                class="proj-toggle-icon"
+                viewBox="0 0 10 6"
+                width="10"
+                height="6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M1 1l4 4 4-4" />
+              </svg>
+            </button>
+            {{- end }}
+          </div>
+        </div>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<style>
+  .project-card {
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  .project-card:hover {
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.12) !important;
+  }
+  .project-card-clickable {
+    cursor: pointer;
+  }
+
+  /* Toggle button */
+  .proj-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-color, #007bff);
+    cursor: pointer;
+    user-select: none;
+  }
+  .proj-toggle-btn:hover {
+    opacity: 0.75;
+  }
+  .proj-toggle-icon {
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+  }
+  .proj-toggle-btn[aria-expanded="true"] .proj-toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  /* Collapsible body */
+  .proj-details-body {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      max-height 0.35s ease,
+      opacity 0.3s ease;
+  }
+  .proj-details-body.open {
+    max-height: 800px;
+    opacity: 1;
+    transition:
+      max-height 0.4s ease,
+      opacity 0.25s ease 0.05s;
+  }
+</style>
+
+<script>
+  function projToggle(card) {
+    if (card.classList.contains("proj-toggle-btn")) {
+      card = card.closest(".project-card");
+    }
+    var btn = card.querySelector(".proj-toggle-btn");
+    var body = card.querySelector(".proj-details-body");
+    if (!btn || !body) return;
+    var expanded = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", String(!expanded));
+    body.classList.toggle("open", !expanded);
+  }
+</script>
+{{- end }}

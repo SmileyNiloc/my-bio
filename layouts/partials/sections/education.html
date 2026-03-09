@@ -1,0 +1,71 @@
+{{ if .Site.Params.education.enable | default false }} {{- $resume :=
+.Site.Data.resume -}}
+<section id="education" class="py-5">
+  <div class="container">
+    <h3 class="text-center">{{ (i18n "education") | default "Education" }}</h3>
+    <div class="row justify-content-center py-5">
+      {{ $indexMenu := .Site.Params.education.index }} {{ range $index, $element
+      := $resume.education }}
+      <div class="col-12 p-0">
+        <div class="row row align-items-center justify-content-center m-1 mb-4">
+          {{ if $indexMenu }}
+          <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
+            <div class="py-2">
+              <span class="index shadow-lg"> {{ add $index 1 }} </span>
+            </div>
+          </div>
+          {{ end }}
+
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-body">
+                <div class="float-end">
+                  <small
+                    >{{ .startDate }} - {{ .endDate | default (i18n "present")
+                    }}</small
+                  >
+                </div>
+                <h5 class="card-title">
+                  {{ .studyType }} {{ if .area }}in {{ .area }}{{ end }}
+                </h5>
+
+                {{ if .url }}
+                <a href="{{ .url }}" target="_blank">
+                  <h6>{{ .institution }}</h6>
+                </a>
+                {{ else }}
+                <h6>{{ .institution }}</h6>
+                {{ end }} {{ if .score }}
+                <div class="py-1">
+                  GPA:
+                  <i>
+                    <small>{{ .score }}</small>
+                  </i>
+                </div>
+                {{ end }}
+
+                <div class="py-1 education-content">
+                  {{ if .courses }}
+                  <p>
+                    <strong>Relevant Courses:</strong> {{ delimit .courses ", "
+                    }}
+                  </p>
+                  {{ end }} {{ if .highlights }}
+                  <p><strong>Highlights:</strong></p>
+                  <ul>
+                    {{ range .highlights }}
+                    <li>{{ . | markdownify }}</li>
+                    {{ end }}
+                  </ul>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
