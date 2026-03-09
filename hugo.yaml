@@ -12,28 +12,6 @@ languages:
     languageName: "English"
     weight: 1
     contentDir: "content"
-    # menu: (blog and gallery hidden)
-  es:
-    languageName: "Español"
-    weight: 2
-    contentDir: "content/es"
-    # menu: (blog and gallery hidden)
-  fr:
-    contentDir: "content/fr"
-    languageName: "Français"
-    weight: 3
-    # menu:
-    # main:
-    #   - identifier: blog
-    #     name: Blog
-    #     title: Articles de blog
-    #     url: /fr/blogs
-    #     weight: 1
-    #   - identifier: gallery
-    #     name: Galerie
-    #     title: Galerie d'images
-    #     url: /fr/gallery
-    #     weight: 2
 
 outputs:
   home:
@@ -65,11 +43,11 @@ Menus:
 params:
   title: "Colin Aten"
   description: "Computer Engineering Student"
-  favicon: "my-bio/fav.png"
+  favicon: "fav.png"
   navbar:
     align: ms-auto
     brandName: "Colin Aten"
-    brandLogo: "my-bio/fav.png"
+    brandLogo: "fav.png"
     showBrandLogo: true
     disableSearch: false
     stickyNavBar:
