@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "data/resume.json" # only triggers when resume changes
+      - .github/workflows/reactive_resume.yml # also trigger when workflow file changes, for testing purposes
 
 jobs:
   upload:
@@ -19,7 +20,7 @@ jobs:
           curl -X POST https://rxresu.me/api/resumes/import \
             -H "Content-Type: application/json" \
             -H "x-api-key: ${{ secrets.REACTIVE_RESUME_API_KEY }}" \
-            -d "{\"data\": $(cat resume.json)}" \
+            -d "{\"data\": $(cat data/resume.json)}" \
             --fail \
             --silent \
             --show-error
