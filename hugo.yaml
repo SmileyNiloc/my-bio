@@ -49,7 +49,7 @@ params:
     brandName: "Colin Aten"
     brandLogo: "fav.png"
     showBrandLogo: true
-    disableSearch: false
+    disableSearch: true
     stickyNavBar:
       enable: true
       showOnScrollUp: true
