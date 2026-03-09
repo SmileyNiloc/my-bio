@@ -65,11 +65,11 @@ Menus:
 params:
   title: "Colin Aten"
   description: "Computer Engineering Student"
-  favicon: "/fav.png"
+  favicon: "my-bio/fav.png"
   navbar:
     align: ms-auto
     brandName: "Colin Aten"
-    brandLogo: "/fav.png"
+    brandLogo: "my-bio/fav.png"
     showBrandLogo: true
     disableSearch: false
     stickyNavBar:
