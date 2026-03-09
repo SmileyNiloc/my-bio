@@ -19,7 +19,7 @@ Hugo ships with several [Embedded Shortcodes](https://gohugo.io/content-manageme
 {{</* tweet user="GoHugoIO" id="1315233626070503424" */>}}
 ```
 <br>
-{{< tweet user="GoHugoIO" id="1315233626070503424" >}}
+{{< x user="GoHugoIO" id="1315233626070503424" >}}
 <br>
 
 
