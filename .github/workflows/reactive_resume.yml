@@ -1,0 +1,25 @@
+name: Upload Resume to Reactive Resume
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/resume.json" # only triggers when resume changes
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Import resume to Reactive Resume
+        run: |
+          curl -X POST https://rxresu.me/api/resumes/import \
+            -H "Content-Type: application/json" \
+            -H "x-api-key: ${{ secrets.REACTIVE_RESUME_API_KEY }}" \
+            -d "{\"data\": $(cat resume.json)}" \
+            --fail \
+            --silent \
+            --show-error
