@@ -15,10 +15,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Convert JSON to Reactive Resume v5 format
+        run: python3 .github/scripts/convert_resume.py
+
       - name: Import resume to Reactive Resume
         run: |
           curl --request POST \
-          --url https://rxresu.me/api/openapi/resumes/import \
-          -H "Content-Type: application/json" \
-          -H "x-api-key: ${{ secrets.REACTIVE_RESUME_API_KEY }}" \
-          -d "{\"data\": $(cat data/resume.json)}" \
+            --url https://rxresu.me/api/openapi/resumes/import \
+            -H "Content-Type: application/json" \
+            -H "x-api-key: ${{ secrets.REACTIVE_RESUME_API_KEY }}" \
+            --data @data/rx-payload.json \
+            --fail --show-error
