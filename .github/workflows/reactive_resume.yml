@@ -17,11 +17,8 @@ jobs:
 
       - name: Import resume to Reactive Resume
         run: |
-            curl --request POST \
-            --url https://rxresu.me/api/openapi/resumes/import \
-            -H "Content-Type: application/json" \
-            -H "x-api-key: ${{ secrets.REACTIVE_RESUME_API_KEY }}" \
-            -d "{\"data\": $(cat data/resume.json)}" \
-            
-  -H "x-api-key: jEOcWwzsaHxcrJVWSAjYsbjUxWZNuRUxdtKiQluOzAKgUHPYgrKOPwTBfNzhfJIN" \
-  --data @-
+          curl --request POST \
+          --url https://rxresu.me/api/openapi/resumes/import \
+          -H "Content-Type: application/json" \
+          -H "x-api-key: ${{ secrets.REACTIVE_RESUME_API_KEY }}" \
+          -d "{\"data\": $(cat data/resume.json)}" \
