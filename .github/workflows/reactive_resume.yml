@@ -7,6 +7,7 @@ on:
     paths:
       - "data/resume.json" # only triggers when resume changes
       - .github/workflows/reactive_resume.yml # also trigger when workflow file changes, for testing purposes
+      - .github/scripts/convert_resume.py # also trigger when conversion script changes, for testing purposes
 
 jobs:
   upload:

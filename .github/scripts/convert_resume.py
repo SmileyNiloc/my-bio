@@ -41,7 +41,7 @@ def main():
             "title": "Summary",
             "columns": 1,
             "hidden": False,
-            "content": f"<p>{basics.get('summary', '')}</p><br><p>{basics.get('aboutme', '')}</p>",
+            "content": f"<p>{basics.get('summary', '')}</p>",
         },
         "sections": {
             "profiles": {
