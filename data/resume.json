@@ -1,288 +1,426 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "picture": {
+    "hidden": false,
+    "url": "https://smileyniloc.github.io/my-bio/images/me.jpg",
+    "size": 64,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0,0,0,0)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0,0,0,0)",
+    "shadowWidth": 0
+  },
   "basics": {
     "name": "Colin Aten",
-    "label": "Computer Engineering Student",
-    "aboutme": "I'm a Computer Engineering student at the University of Delaware with a passion creating function solutions using software. Whether I'm developing signal-based monitoring systems, creating web applications, or tinkering with my own home server setups, I love tackling complex problems from the ground up. Beyond the screen and the breadboard, I thrive on staying active and creative. You'll often find me on the water sailing, hitting the slopes for some skiing, or jumping into a fast-paced game of pickleball. I'm also deeply passionate about music—whether I'm laying down a groove on the bass or singing in a choir. I believe the best engineering comes from a well-rounded perspective, and I bring that same collaborative energy and discipline to every project I take on.",
+    "headline": "Computer Engineering Student",
     "email": "colin.aten@gmail.com",
     "phone": "240-495-0095",
-    "url": "https://colin-aten.com",
-    "summary": "Computer Engineering student at the University of Delaware with hands-on experience in embedded systems, full-stack development, and control systems integration. Demonstrated initiative through end-to-end personal projects involving real-time data processing, cloud infrastructure, and signal-based sensing. Eager to apply analytical and engineering fundamentals to mission-level problems.",
-    "profiles": [
-      {
-        "network": "LinkedIn",
-        "username": "colin-aten-3313b7259",
-        "url": "https://www.linkedin.com/in/colin-aten-3313b7259/"
-      },
-      {
-        "network": "GitHub",
-        "username": "SmileyNiloc",
-        "url": "https://github.com/SmileyNiloc"
-      }
-    ]
+    "location": "Newark, Delaware",
+    "website": {
+      "url": "https://colin-aten.com",
+      "label": "Portfolio"
+    },
+    "customFields": []
   },
-  "education": [
-    {
-      "institution": "University of Delaware",
-      "url": "https://www.udel.edu",
-      "area": "Computer Engineering",
-      "studyType": "Bachelor of Science",
-      "startDate": "2022-08",
-      "endDate": "2026-05",
-      "score": "3.85",
-      "courses": [
-        "Probability & Statistics for Engineers",
-        "Signals & Systems",
-        "Digital Signal Processing",
-        "Numerical Methods",
-        "Embedded Systems",
-        "Computer Architecture",
-        "Control Systems",
-        "Digital Logic & VHDL",
-        "Cybersecurity Fundamentals"
-      ],
-      "highlights": [
-        "Honors College",
-        "Computer Science Minor",
-        "Cybersecurity Minor",
-        "German for Engineers Program",
-        "IEEE Honor Society Tau Beta Pi"
+  "summary": {
+    "title": "Summary",
+    "columns": 1,
+    "hidden": false,
+    "content": "<p>Computer Engineering student at the University of Delaware with hands-on experience in embedded systems, full-stack development, and control systems integration. Demonstrated initiative through end-to-end personal projects involving real-time data processing, cloud infrastructure, and signal-based sensing. Eager to apply analytical and engineering fundamentals to mission-level problems.</p><br><p>I'm a Computer Engineering student at the University of Delaware with a passion creating function solutions using software. Whether I'm developing signal-based monitoring systems, creating web applications, or tinkering with my own home server setups, I love tackling complex problems from the ground up. Beyond the screen and the breadboard, I thrive on staying active and creative. You'll often find me on the water sailing, hitting the slopes for some skiing, or jumping into a fast-paced game of pickleball. I'm also deeply passionate about music—whether I'm laying down a groove on the bass or singing in a choir. I believe the best engineering comes from a well-rounded perspective, and I bring that same collaborative energy and discipline to every project I take on.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profiles",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "10000000-0000-0000-0000-000000000001",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "icon": "linkedin-logo",
+          "network": "LinkedIn",
+          "username": "colin-aten-3313b7259",
+          "website": {
+            "url": "https://www.linkedin.com/in/colin-aten-3313b7259/",
+            "label": "LinkedIn"
+          }
+        },
+        {
+          "id": "10000000-0000-0000-0000-000000000002",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "icon": "github-logo",
+          "network": "GitHub",
+          "username": "SmileyNiloc",
+          "website": {
+            "url": "https://github.com/SmileyNiloc",
+            "label": "GitHub"
+          }
+        }
       ]
+    },
+    "experience": {
+      "title": "Experience",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "20000000-0000-0000-0000-000000000001",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "company": "Multi-Dimensional Integration",
+          "position": "Control Systems Engineer Intern",
+          "location": "",
+          "period": "06/2025 - 08/2025",
+          "website": { "url": "", "label": "" },
+          "description": "<ul><li>Designed and deployed a FastAPI-based Python tool to automate JSON configuration editing for Ignition SCADA projects, reducing manual workflow time and eliminating a class of human error in config management</li><li>Built a custom Python library for programmatic manipulation of Ignition JSON data structures, enabling repeatable and testable configuration workflows across multiple projects</li><li>Developed interactive Python and Java interfaces within the Ignition platform to improve operator visibility and control over live industrial processes</li><li>Extended legacy control system projects by interpreting engineering drawings and technical documentation, validating outputs against original design specifications</li><li>Collaborated within a multidisciplinary engineering team to scope, implement, and deliver features against project management milestones</li></ul>"
+        },
+        {
+          "id": "20000000-0000-0000-0000-000000000002",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "company": "Johns Hopkins University, Department of Epidemiology",
+          "position": "Clinical Studies Data System Intern",
+          "location": "",
+          "period": "06/2024 - 08/2024",
+          "website": { "url": "", "label": "" },
+          "description": "<ul><li>Developed JavaScript tooling for clinical trial data entry forms, improving data validation and reducing entry errors across active studies</li><li>Built a PHP program to convert and migrate a Microsoft Access database to a web-compatible structure, preserving referential integrity across thousands of records</li><li>Maintained and improved client-server architecture for web-based data collection forms used in ongoing epidemiological research</li><li>Worked iteratively with researchers and staff to incorporate user feedback into system improvements under real-world data integrity constraints</li></ul>"
+        },
+        {
+          "id": "20000000-0000-0000-0000-000000000003",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "company": "University of Delaware, Dept. of Electrical & Computer Engineering",
+          "position": "Lab Assistant – Analog Circuits I & Digital Systems",
+          "location": "",
+          "period": "02/2024 - 05/2026",
+          "website": { "url": "", "label": "" },
+          "description": "<ul><li>Guided students hands-on through analog circuit construction, measurement, and debugging in weekly lab sections</li><li>Led a lab section on digital systems, mentoring students through VHDL design projects from specification to synthesis and simulation</li><li>Diagnosed and explained circuit and code failures, building student intuition for both hardware and HDL debugging</li></ul>"
+        },
+        {
+          "id": "20000000-0000-0000-0000-000000000004",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "company": "Mid Atlantic Community Church",
+          "position": "Tech Intern",
+          "location": "",
+          "period": "05/2022 - 08/2023",
+          "website": { "url": "", "label": "" },
+          "description": "<ul><li>Configured and operated ProPresenter software for live in-house displays and simultaneous online streaming</li><li>Shot and edited marketing and informational videos using DSLR cameras and Adobe Premiere Pro</li><li>Installed, configured, and maintained an indoor stage lighting system and various AV electronics</li></ul>"
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "30000000-0000-0000-0000-000000000001",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "school": "University of Delaware",
+          "degree": "Bachelor of Science",
+          "area": "Computer Engineering",
+          "grade": "3.85",
+          "location": "",
+          "period": "08/2022 - 05/2026",
+          "website": { "url": "https://www.udel.edu", "label": "UDel" },
+          "description": "<p><strong>Highlights:</strong> Honors College, Computer Science Minor, Cybersecurity Minor, German for Engineers Program, IEEE Honor Society Tau Beta Pi</p><p><strong>Courses:</strong> Probability & Statistics for Engineers, Signals & Systems, Digital Signal Processing, Numerical Methods, Embedded Systems, Computer Architecture, Control Systems, Digital Logic & VHDL, Cybersecurity Fundamentals</p>"
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "40000000-0000-0000-0000-000000000001",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "name": "CradleWave Baby Monitor",
+          "period": "",
+          "website": {
+            "url": "https://github.com/SmileyNiloc/CradleWave",
+            "label": "GitHub"
+          },
+          "description": "<p>End-to-end IoT sensing system using 60 GHz millimeter-wave radar for non-contact infant monitoring</p><ul><li>Designed a sensing pipeline using a 60 GHz FMCW radar module to detect infant presence, motion, and breathing rate without physical contact</li><li>Implemented signal processing on raw radar returns to extract breathing rate and movement metrics; evaluated detection performance against ground-truth observations across varying distance and orientation scenarios</li><li>Built a Python FastAPI backend to ingest real-time radar data, apply processing algorithms, and stream results to cloud storage via Google Firebase</li><li>Developed a Vue.js frontend and mobile-accessible web app for live monitoring dashboards and historical data review</li><li>Validated system robustness across multiple environmental conditions; characterized false-alarm rate and detection latency as key performance indicators</li></ul><p><em>Keywords: Python, FastAPI, Vue.js, Firebase, 60GHz Radar, Signal Processing, IoT, Real-time Systems</em></p>"
+        },
+        {
+          "id": "40000000-0000-0000-0000-000000000002",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "name": "Ignition JSON Automation Tool",
+          "period": "",
+          "website": { "url": "", "label": "" },
+          "description": "<p>Python tooling for automating configuration workflows in Ignition SCADA environments</p><ul><li>Built a FastAPI application exposing a REST interface for programmatic JSON editing of Ignition project configurations</li><li>Developed a reusable internal Python library abstracting common Ignition JSON data manipulation patterns</li><li>Reduced configuration turnaround time and introduced testability into previously manual processes</li></ul><p><em>Keywords: Python, FastAPI, REST API, SCADA, Ignition, Automation</em></p>"
+        },
+        {
+          "id": "40000000-0000-0000-0000-000000000003",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "name": "RemAIk – Full-Stack Browser Game",
+          "period": "",
+          "website": {
+            "url": "https://github.com/SmileyNiloc/remAIk/tree/main",
+            "label": "GitHub"
+          },
+          "description": "<p>Multiplayer browser-based game with AI-generated content and secure user authentication</p><ul><li>Built a full-stack multiplayer game using Vue.js frontend and Google Firebase for real-time database and authentication</li><li>Designed a secure user-focused data model with role-based access controls and authenticated session management</li><li>Integrated an AI content generation pipeline to dynamically produce game prompts and assets</li></ul><p><em>Keywords: Vue.js, Firebase, JavaScript, Full-Stack, Authentication</em></p>"
+        },
+        {
+          "id": "40000000-0000-0000-0000-000000000004",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "name": "Arduino Shield Cloud Timer",
+          "period": "",
+          "website": { "url": "", "label": "" },
+          "description": "<p>Custom Arduino shield with cloud-connected dashboard for timer monitoring and control</p><ul><li>Designed a custom PCB Arduino shield integrating multiple external peripherals including display, input, and wireless modules</li><li>Wrote firmware to control and display a configurable timer with cloud telemetry via MQTT</li><li>Built a web dashboard to visualize live and historical timer data sent from the device to the cloud</li></ul><p><em>Keywords: Arduino, Embedded Systems, PCB Design, IoT, Cloud, C++</em></p>"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "50000000-0000-0000-0000-000000000001",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "icon": "",
+          "name": "Programming Languages",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Python",
+            "C",
+            "C++",
+            "JavaScript",
+            "TypeScript",
+            "Bash",
+            "ARMv8 Assembly",
+            "VHDL",
+            "HTML",
+            "CSS",
+            "VBScript",
+            "Jython",
+            "PHP"
+          ]
+        },
+        {
+          "id": "50000000-0000-0000-0000-000000000002",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "icon": "",
+          "name": "Frameworks & Libraries",
+          "proficiency": "",
+          "level": 0,
+          "keywords": ["FastAPI", "Vue.js", "Node.js"]
+        },
+        {
+          "id": "50000000-0000-0000-0000-000000000003",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "icon": "",
+          "name": "Data & Analysis",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Signal Processing",
+            "Data Visualization",
+            "NumPy",
+            "Pandas",
+            "Real-time Data Pipelines"
+          ]
+        },
+        {
+          "id": "50000000-0000-0000-0000-000000000004",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "icon": "",
+          "name": "Systems & Infrastructure",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Linux / Ubuntu",
+            "Raspberry Pi",
+            "Google Firebase",
+            "Google Cloud",
+            "Git",
+            "Docker",
+            "Windows",
+            "macOS"
+          ]
+        },
+        {
+          "id": "50000000-0000-0000-0000-000000000005",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "icon": "",
+          "name": "Hardware & Embedded",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "VHDL",
+            "Vivado",
+            "MPLAB",
+            "Arduino",
+            "PCB Design",
+            "Analog Circuits",
+            "60GHz FMCW Radar"
+          ]
+        },
+        {
+          "id": "50000000-0000-0000-0000-000000000006",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "icon": "",
+          "name": "Software & Tools",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Visual Studio Code",
+            "WinSCP",
+            "Ignition SCADA",
+            "Inkscape",
+            "Photoshop",
+            "Adobe Premiere Pro",
+            "ProPresenter",
+            "Google Suite",
+            "Proton/Wine"
+          ]
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "interests": {
+      "title": "Interests",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "awards": {
+      "title": "Awards",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "60000000-0000-0000-0000-000000000001",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "title": "Eagle Scout",
+          "awarder": "Boy Scouts of America",
+          "date": "08/2022",
+          "website": { "url": "", "label": "" },
+          "description": "<p>Highest rank in Scouting. Served as Senior Patrol Leader, Philmont Crew Leader, and held multiple other leadership positions over 7 years. Planned annual programs and weekly meetings, leading groups of up to 70 scouts across campouts, high-adventure treks, and service projects.</p>"
+        },
+        {
+          "id": "60000000-0000-0000-0000-000000000002",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "title": "Tau Beta Pi – IEEE Honor Society",
+          "awarder": "University of Delaware",
+          "date": "",
+          "website": { "url": "", "label": "" },
+          "description": "<p>Member of the engineering honor society recognizing academic excellence and commitment to the profession.</p>"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Certifications",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "publications": {
+      "title": "Publications",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Volunteer",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "70000000-0000-0000-0000-000000000001",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "organization": "Cru at University of Delaware",
+          "location": "",
+          "period": "01/2023 - Present",
+          "website": { "url": "", "label": "" },
+          "description": "<p>Lead a campus ministry community at the University of Delaware</p><ul><li>Coordinated event planning with university administration for events of 50+ students</li><li>Grew a collaborative campus community through intentional relationship building and programming</li></ul>"
+        }
+      ]
+    },
+    "references": {
+      "title": "References",
+      "columns": 1,
+      "hidden": false,
+      "items": []
     }
-  ],
-  "work": [
-    {
-      "name": "Multi-Dimensional Integration",
-      "position": "Control Systems Engineer Intern",
-      "startDate": "2025-06",
-      "endDate": "2025-08",
-      "highlights": [
-        "Designed and deployed a FastAPI-based Python tool to automate JSON configuration editing for Ignition SCADA projects, reducing manual workflow time and eliminating a class of human error in config management",
-        "Built a custom Python library for programmatic manipulation of Ignition JSON data structures, enabling repeatable and testable configuration workflows across multiple projects",
-        "Developed interactive Python and Java interfaces within the Ignition platform to improve operator visibility and control over live industrial processes",
-        "Extended legacy control system projects by interpreting engineering drawings and technical documentation, validating outputs against original design specifications",
-        "Collaborated within a multidisciplinary engineering team to scope, implement, and deliver features against project management milestones"
+  },
+  "customSections": [],
+  "metadata": {
+    "template": "rhyhorn",
+    "layout": {
+      "sidebarWidth": 25,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": [
+            "summary",
+            "experience",
+            "education",
+            "projects",
+            "volunteer"
+          ],
+          "sidebar": ["profiles", "skills", "awards"]
+        }
       ]
     },
-    {
-      "name": "Johns Hopkins University, Department of Epidemiology",
-      "position": "Clinical Studies Data System Intern",
-      "startDate": "2024-06",
-      "endDate": "2024-08",
-      "highlights": [
-        "Developed JavaScript tooling for clinical trial data entry forms, improving data validation and reducing entry errors across active studies",
-        "Built a PHP program to convert and migrate a Microsoft Access database to a web-compatible structure, preserving referential integrity across thousands of records",
-        "Maintained and improved client-server architecture for web-based data collection forms used in ongoing epidemiological research",
-        "Worked iteratively with researchers and staff to incorporate user feedback into system improvements under real-world data integrity constraints"
-      ]
+    "css": { "enabled": false, "value": "" },
+    "page": {
+      "gapX": 20,
+      "gapY": 20,
+      "marginX": 24,
+      "marginY": 24,
+      "format": "letter",
+      "locale": "en-US",
+      "hideIcons": false
     },
-    {
-      "name": "University of Delaware, Dept. of Electrical & Computer Engineering",
-      "position": "Lab Assistant – Analog Circuits I & Digital Systems",
-      "startDate": "2024-02",
-      "endDate": "2026-05",
-      "highlights": [
-        "Guided students hands-on through analog circuit construction, measurement, and debugging in weekly lab sections",
-        "Led a lab section on digital systems, mentoring students through VHDL design projects from specification to synthesis and simulation",
-        "Diagnosed and explained circuit and code failures, building student intuition for both hardware and HDL debugging"
-      ]
+    "design": {
+      "level": { "icon": "", "type": "hidden" },
+      "colors": {
+        "primary": "rgba(0,0,0,1)",
+        "text": "rgba(0,0,0,1)",
+        "background": "rgba(255,255,255,1)"
+      }
     },
-    {
-      "name": "Mid Atlantic Community Church",
-      "position": "Tech Intern",
-      "startDate": "2022-05",
-      "endDate": "2023-08",
-      "highlights": [
-        "Configured and operated ProPresenter software for live in-house displays and simultaneous online streaming",
-        "Shot and edited marketing and informational videos using DSLR cameras and Adobe Premiere Pro",
-        "Installed, configured, and maintained an indoor stage lighting system and various AV electronics"
-      ]
-    }
-  ],
-  "projects": [
-    {
-      "name": "CradleWave Baby Monitor",
-      "description": "End-to-end IoT sensing system using 60 GHz millimeter-wave radar for non-contact infant monitoring",
-      "url": "https://github.com/SmileyNiloc/CradleWave",
-      "highlights": [
-        "Designed a sensing pipeline using a 60 GHz FMCW radar module to detect infant presence, motion, and breathing rate without physical contact",
-        "Implemented signal processing on raw radar returns to extract breathing rate and movement metrics; evaluated detection performance against ground-truth observations across varying distance and orientation scenarios",
-        "Built a Python FastAPI backend to ingest real-time radar data, apply processing algorithms, and stream results to cloud storage via Google Firebase",
-        "Developed a Vue.js frontend and mobile-accessible web app for live monitoring dashboards and historical data review",
-        "Validated system robustness across multiple environmental conditions; characterized false-alarm rate and detection latency as key performance indicators"
-      ],
-      "keywords": [
-        "Python",
-        "FastAPI",
-        "Vue.js",
-        "Firebase",
-        "60GHz Radar",
-        "Signal Processing",
-        "IoT",
-        "Real-time Systems"
-      ],
-      "roles": ["Designer", "Developer"],
-      "type": "application"
+    "typography": {
+      "body": {
+        "fontFamily": "Inter",
+        "fontWeights": ["400"],
+        "fontSize": 10,
+        "lineHeight": 1.5
+      },
+      "heading": {
+        "fontFamily": "Inter",
+        "fontWeights": ["700"],
+        "fontSize": 14,
+        "lineHeight": 1.5
+      }
     },
-    {
-      "name": "Ignition JSON Automation Tool",
-      "description": "Python tooling for automating configuration workflows in Ignition SCADA environments",
-      "highlights": [
-        "Built a FastAPI application exposing a REST interface for programmatic JSON editing of Ignition project configurations",
-        "Developed a reusable internal Python library abstracting common Ignition JSON data manipulation patterns",
-        "Reduced configuration turnaround time and introduced testability into previously manual processes"
-      ],
-      "keywords": [
-        "Python",
-        "FastAPI",
-        "REST API",
-        "SCADA",
-        "Ignition",
-        "Automation"
-      ],
-      "roles": ["Developer"],
-      "type": "application"
-    },
-    {
-      "name": "RemAIk – Full-Stack Browser Game",
-      "description": "Multiplayer browser-based game with AI-generated content and secure user authentication",
-      "url": "https://github.com/SmileyNiloc/remAIk/tree/main",
-      "highlights": [
-        "Built a full-stack multiplayer game using Vue.js frontend and Google Firebase for real-time database and authentication",
-        "Designed a secure user-focused data model with role-based access controls and authenticated session management",
-        "Integrated an AI content generation pipeline to dynamically produce game prompts and assets"
-      ],
-      "keywords": [
-        "Vue.js",
-        "Firebase",
-        "JavaScript",
-        "Full-Stack",
-        "Authentication"
-      ],
-      "roles": ["Designer", "Developer"],
-      "type": "application"
-    },
-    {
-      "name": "Arduino Shield Cloud Timer",
-      "description": "Custom Arduino shield with cloud-connected dashboard for timer monitoring and control",
-      "highlights": [
-        "Designed a custom PCB Arduino shield integrating multiple external peripherals including display, input, and wireless modules",
-        "Wrote firmware to control and display a configurable timer with cloud telemetry via MQTT",
-        "Built a web dashboard to visualize live and historical timer data sent from the device to the cloud"
-      ],
-      "keywords": [
-        "Arduino",
-        "Embedded Systems",
-        "PCB Design",
-        "IoT",
-        "Cloud",
-        "C++"
-      ],
-      "roles": ["Designer", "Developer"],
-      "type": "application"
-    }
-  ],
-  "skills": [
-    {
-      "name": "Programming Languages",
-      "keywords": [
-        "Python",
-        "C",
-        "C++",
-        "JavaScript",
-        "TypeScript",
-        "Bash",
-        "ARMv8 Assembly",
-        "VHDL",
-        "HTML",
-        "CSS",
-        "VBScript",
-        "Jython",
-        "PHP"
-      ]
-    },
-    {
-      "name": "Frameworks & Libraries",
-      "keywords": ["FastAPI", "Vue.js", "Node.js"]
-    },
-    {
-      "name": "Data & Analysis",
-      "keywords": [
-        "Signal Processing",
-        "Data Visualization",
-        "NumPy",
-        "Pandas",
-        "Real-time Data Pipelines"
-      ]
-    },
-    {
-      "name": "Systems & Infrastructure",
-      "keywords": [
-        "Linux / Ubuntu (daily driver)",
-        "Raspberry Pi",
-        "Google Firebase",
-        "Google Cloud",
-        "Git",
-        "Docker (basic)",
-        "Windows",
-        "macOS"
-      ]
-    },
-    {
-      "name": "Hardware & Embedded",
-      "keywords": [
-        "VHDL",
-        "Vivado",
-        "MPLAB",
-        "Arduino",
-        "PCB Design",
-        "Analog Circuits",
-        "60GHz FMCW Radar"
-      ]
-    },
-    {
-      "name": "Software & Tools",
-      "keywords": [
-        "Visual Studio Code",
-        "WinSCP",
-        "Ignition SCADA",
-        "Inkscape",
-        "Photoshop",
-        "Adobe Premiere Pro",
-        "ProPresenter",
-        "Google Suite",
-        "Proton/Wine"
-      ]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Cru at University of Delaware",
-      "position": "Cru President",
-      "startDate": "2023-01",
-      "summary": "Lead a campus ministry community at the University of Delaware",
-      "highlights": [
-        "Coordinated event planning with university administration for events of 50+ students",
-        "Grew a collaborative campus community through intentional relationship building and programming"
-      ]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Eagle Scout",
-      "date": "2022-08",
-      "awarder": "Boy Scouts of America",
-      "summary": "Highest rank in Scouting. Served as Senior Patrol Leader, Philmont Crew Leader, and held multiple other leadership positions over 7 years. Planned annual programs and weekly meetings, leading groups of up to 70 scouts across campouts, high-adventure treks, and service projects."
-    },
-    {
-      "title": "Tau Beta Pi – IEEE Honor Society",
-      "awarder": "University of Delaware",
-      "summary": "Member of the engineering honor society recognizing academic excellence and commitment to the profession."
-    }
-  ],
-  "meta": {
-    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
-    "version": "v1.0.0",
-    "lastModified": "2025-03-09"
+    "notes": ""
   }
 }
