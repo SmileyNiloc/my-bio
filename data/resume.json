@@ -33,13 +33,15 @@
       "courses": [
         "Probability & Statistics for Engineers",
         "Signals & Systems",
-        "Digital Signal Processing",
-        "Numerical Methods",
-        "Embedded Systems",
+        "Search & Data Mining",
+        "Computer Networks",
         "Computer Architecture",
-        "Control Systems",
+        "Digital Signal Processing",
+        "Embedded Systems",
         "Digital Logic & VHDL",
-        "Cybersecurity Fundamentals"
+        "Cybersecurity Fundamentals",
+        "Secure Software Design in x86",
+        "Web Application Security"
       ],
       "highlights": [
         "Honors College",
@@ -84,7 +86,7 @@
       "highlights": [
         "Guided students hands-on through analog circuit construction, measurement, and debugging in weekly lab sections",
         "Led a lab section on digital systems, mentoring students through VHDL design projects from specification to synthesis and simulation",
-        "Diagnosed and explained circuit and code failures, building student intuition for both hardware and HDL debugging"
+        "Diagnosed and explained circuit and code failures, building student intuition for both hardware and VHDL debugging"
       ]
     },
     {
@@ -190,29 +192,25 @@
         "C",
         "C++",
         "JavaScript",
-        "TypeScript",
         "Bash",
         "ARMv8 Assembly",
         "VHDL",
         "HTML",
         "CSS",
-        "VBScript",
-        "Jython",
-        "PHP"
+        "PHP",
+        "x86 Assembly"
       ]
     },
     {
       "name": "Frameworks & Libraries",
-      "keywords": ["FastAPI", "Vue.js", "Node.js"]
-    },
-    {
-      "name": "Data & Analysis",
       "keywords": [
-        "Signal Processing",
-        "Data Visualization",
+        "FastAPI",
+        "Vue.js",
+        "Node.js",
         "NumPy",
         "Pandas",
-        "Real-time Data Pipelines"
+        "Typescript",
+        "Jython"
       ]
     },
     {
@@ -223,9 +221,7 @@
         "Google Firebase",
         "Google Cloud",
         "Git",
-        "Docker (basic)",
-        "Windows",
-        "macOS"
+        "Docker"
       ]
     },
     {
@@ -247,10 +243,8 @@
         "WinSCP",
         "Ignition SCADA",
         "Inkscape",
-        "Photoshop",
         "Adobe Premiere Pro",
         "ProPresenter",
-        "Google Suite",
         "Proton/Wine"
       ]
     }
@@ -276,6 +270,7 @@
     },
     {
       "title": "Tau Beta Pi – IEEE Honor Society",
+      "date": "2025-03",
       "awarder": "University of Delaware",
       "summary": "Member of the engineering honor society recognizing academic excellence and commitment to the profession."
     }
