@@ -71,9 +71,9 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "#"
+      url: "/images/ColinAten_Resume_APL20250318.pdf"
       download: true
-      newPage: false
+      newPage: true
 
   # About
   about:
