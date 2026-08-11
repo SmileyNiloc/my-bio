@@ -57,7 +57,7 @@
       "name": "Multi-Dimensional Integration",
       "position": "Control Systems Engineer Intern",
       "startDate": "2025-06",
-      "endDate": "2025-08",
+      "endDate": "Present",
       "highlights": [
         "Designed and deployed a FastAPI-based Python tool to automate JSON configuration editing for Ignition SCADA projects, reducing manual workflow time and eliminating a class of human error in config management",
         "Built a custom Python library for programmatic manipulation of Ignition JSON data structures, enabling repeatable and testable configuration workflows across multiple projects",
